@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z2X-VB-8cX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="CXi-9g-EE2">
+            <objects>
+                <tableViewController id="kgf-ti-FjS" customClass="HomesTableViewController" customModule="MoviesAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5rq-LV-jx2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="39j-Dt-E7J">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="39j-Dt-E7J" id="oV7-Mx-hPg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kgf-ti-FjS" id="nNX-15-6zv"/>
+                            <outlet property="delegate" destination="kgf-ti-FjS" id="zlk-vq-6Ra"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="homekit" catalog="system" id="VgF-IH-st3"/>
+                    <navigationItem key="navigationItem" id="sNu-bA-Luk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mwe-UG-ZvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="69"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="RPf-Iw-q18">
+            <objects>
+                <viewController id="sWW-1N-FJF" customClass="SearchViewController" customModule="MoviesAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jNF-xd-mBp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bxh-uc-cWi">
+                                <rect key="frame" x="0.0" y="139" width="414" height="674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="cj5-IG-oab">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ABP-2a-gDE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cj5-IG-oab" firstAttribute="leading" secondItem="ABP-2a-gDE" secondAttribute="leading" id="3p3-j0-pAL"/>
+                            <constraint firstItem="cj5-IG-oab" firstAttribute="trailing" secondItem="ABP-2a-gDE" secondAttribute="trailing" id="CGW-IT-iOM"/>
+                            <constraint firstItem="Bxh-uc-cWi" firstAttribute="bottom" secondItem="ABP-2a-gDE" secondAttribute="bottom" id="LW7-tS-XRW"/>
+                            <constraint firstItem="cj5-IG-oab" firstAttribute="top" secondItem="ABP-2a-gDE" secondAttribute="top" id="NeZ-zi-Fst"/>
+                            <constraint firstItem="Bxh-uc-cWi" firstAttribute="leading" secondItem="ABP-2a-gDE" secondAttribute="leading" id="RJR-ik-JMb"/>
+                            <constraint firstItem="Bxh-uc-cWi" firstAttribute="top" secondItem="cj5-IG-oab" secondAttribute="bottom" id="Sue-aX-E4M"/>
+                            <constraint firstItem="Bxh-uc-cWi" firstAttribute="trailing" secondItem="ABP-2a-gDE" secondAttribute="trailing" id="VXU-3R-D4x"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="k7W-Em-fov"/>
+                    <navigationItem key="navigationItem" id="KXs-HO-efp"/>
+                    <connections>
+                        <outlet property="searchBar" destination="cj5-IG-oab" id="eYR-FF-nrH"/>
+                        <outlet property="tableView" destination="Bxh-uc-cWi" id="Zcy-81-u1G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYj-Ho-CQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="810"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sUO-TY-bke">
+            <objects>
+                <navigationController id="z2X-VB-8cX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="meR-cb-VoB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JdB-jm-7Oz" kind="relationship" relationship="rootViewController" id="7oA-RV-f3O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNt-KH-DsP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="459"/>
+        </scene>
+        <!--Wookie Movies-->
+        <scene sceneID="0Ep-cS-Wj3">
+            <objects>
+                <tabBarController title="Wookie Movies" id="JdB-jm-7Oz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Wookie Movies" id="BCF-p3-9rK"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y4K-7x-yD7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.55686274509803924" green="0.76924277157151921" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kgf-ti-FjS" kind="relationship" relationship="viewControllers" id="Zy5-sw-3NN"/>
+                        <segue destination="sWW-1N-FJF" kind="relationship" relationship="viewControllers" id="21M-HJ-s2R"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ili-Yw-1OM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="460"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
